@@ -4,11 +4,64 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b085a5b-f0ef-4f7c-96e0-19153d3a943d" name="Changes" comment="" />
+    <list default="true" id="5b085a5b-f0ef-4f7c-96e0-19153d3a943d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa3/controller/ReservaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa3/controller/ReservaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa3/entity/Pista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa3/entity/Pista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa3/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa3/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa3/service/PistaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa3/service/PistaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/Jpa3ApplicationE2Etest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/Jpa3ApplicationE2Etest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/controller/ReservaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/controller/ReservaControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/repos/ReservaRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/repos/ReservaRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/repos/RolRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/repos/RolRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/repos/UsuarioRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/repos/UsuarioRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/service/ReservaServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/service/ReservaServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/service/UsuarioServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa3/E2E/service/UsuarioServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/service/PistaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/service/PistaService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="8560fcad-30b5-4995-a1e6-605bd6ee617b" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="3bf12c43-1d9d-4223-b476-edf470326ba5" />
+            <option name="modeId" value="Agent" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="gemini-3.1-pro-preview" />
+            <option name="status" value="Stopped" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="ec0f84b0-d38d-4f87-8b13-54c0c93734f5" />
+            <option name="modeId" value="Agent" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="8560fcad-30b5-4995-a1e6-605bd6ee617b" />
+            <option name="modeId" value="Agent" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Stopped" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
   </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
@@ -21,8 +74,8 @@
   </component>
   <component name="CopilotUserSelectedModel">
     <selectedModels>
-      <entry key="chat-panel" value="Auto" />
       <entry key="agent-panel" value="Auto" />
+      <entry key="chat-panel" value="Auto" />
     </selectedModels>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -46,12 +99,12 @@
     &quot;assignee&quot;: &quot;Juan-Pan&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Juan-Pan/FrontEnd-PadelClub.git",
-    "accountId": "6f2c3901-7c5c-4cfc-87e3-3f6a2693490f"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Juan-Pan/FrontEnd-PadelClub.git&quot;,
+    &quot;accountId&quot;: &quot;dd45c514-0caf-47a4-a14d-6caa4ffeb3b4&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -64,38 +117,52 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="3B8Vq1ylTe467KoS8Q3sA4QuH3T" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="LOCAL" />
+      </template>
+    </option>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.Jpa3Application.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/anarecarte-pacheco/FrontEnd-PadelClub",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Jpa3Application.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lopez/OneDrive - Universidad Pontificia Comillas/Documentos/comillas/Aplicaciones/ProyectoFINALPAT/FrontEnd-PadelClub&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lopez\OneDrive - Universidad Pontificia Comillas\Documentos\comillas\Aplicaciones\proyecto\1\PAT_PistaPadel_Grupo4_Persistencia\frontend" />
@@ -121,7 +188,6 @@
       <workItem from="1776237729876" duration="13569000" />
       <workItem from="1776279220480" duration="3894000" />
       <workItem from="1776284592383" duration="2467000" />
-      <workItem from="1778857202017" duration="310000" />
     </task>
     <servers />
   </component>

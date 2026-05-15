@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: edu.comillas.icai.gitt.pat.spring.jpa3.E2E.PistaPadelE2EFullTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.720 s -- in edu.comillas.icai.gitt.pat.spring.jpa3.E2E.PistaPadelE2EFullTest

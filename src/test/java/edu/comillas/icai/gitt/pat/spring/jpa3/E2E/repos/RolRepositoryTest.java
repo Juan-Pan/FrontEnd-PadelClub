@@ -20,10 +20,6 @@ class RolRepositoryTest {
     @Test
     @DisplayName("Debe buscar rol por nombreRol")
     void buscarRolPorNombreRol() {
-        Rol rol = new Rol();
-        rol.nombreRol = "ADMIN";
-        rol.descripcion = "Administrador";
-        rolRepository.save(rol);
 
         Optional<Rol> resultado = rolRepository.findByNombreRol("ADMIN");
 

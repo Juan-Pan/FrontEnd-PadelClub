@@ -26,10 +26,12 @@ class UsuarioRepositoryTest {
     @Test
     @DisplayName("Debe buscar usuario por email")
     void buscarUsuarioPorEmail() {
-        Rol rol = new Rol();
-        rol.nombreRol = "USER";
-        rol.descripcion = "Usuario";
-        rol = rolRepository.save(rol);
+        Rol rol = rolRepository.findByNombreRol("USER").orElseGet(() -> {
+            Rol r = new Rol();
+            r.nombreRol = "USER";
+            r.descripcion = "Usuario";
+            return rolRepository.save(r);
+        });
 
         Usuario usuario = new Usuario();
         usuario.nombre = "Carlos";

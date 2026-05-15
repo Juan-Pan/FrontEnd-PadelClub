@@ -21,6 +21,9 @@ public class PistaService {
     @Transactional
     public Pista crearPista(Pista pista) {
         log.info("Creando nueva pista: {}", pista.nombre);
+        if (pista.fechaAlta == null) {
+            pista.fechaAlta = new java.util.Date();
+        }
         return pistaRepository.save(pista);
     }
 

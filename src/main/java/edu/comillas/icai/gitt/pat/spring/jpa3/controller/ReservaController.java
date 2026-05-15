@@ -46,6 +46,7 @@ public class ReservaController {
     }
 
     @PostMapping("/reservations")
+    @ResponseStatus(HttpStatus.CREATED)
     public Reserva crear(@RequestBody Reserva reserva) {
         Usuario usuario = obtenerUsuarioActual();
         reserva.usuario = usuario;
@@ -123,6 +124,25 @@ public class ReservaController {
                                        @RequestParam LocalDate date) {
         pistaService.buscarPista(id);
         return disponibilidadService.calcularDisponibilidad(id, date);
+    }
+
+    @GetMapping("/reservations/availability")
+    public List<String> disponibilidadLegacy(@RequestParam(required = false) LocalDate date,
+                                             @RequestParam(required = false) LocalDate fecha,
+                                             @RequestParam(required = false) Long idPista,
+                                             @RequestParam(required = false) Long courtId) {
+        LocalDate fechaConsulta = date != null ? date : fecha;
+        Long pistaId = idPista != null ? idPista : courtId;
+
+        if (fechaConsulta == null || pistaId == null) {
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST,
+                    "Se requiere fecha y pista"
+            );
+        }
+
+        pistaService.buscarPista(pistaId);
+        return disponibilidadService.calcularDisponibilidad(pistaId, fechaConsulta);
     }
 
     @GetMapping("/admin/reservations")

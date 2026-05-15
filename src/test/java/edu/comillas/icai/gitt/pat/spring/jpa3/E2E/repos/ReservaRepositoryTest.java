@@ -40,10 +40,12 @@ class ReservaRepositoryTest {
     @Test
     @DisplayName("Debe buscar reservas por fechaReserva")
     void buscarReservasPorFechaReserva() {
-        Rol rol = new Rol();
-        rol.nombreRol = "USER";
-        rol.descripcion = "Usuario normal";
-        rol = rolRepository.save(rol);
+        Rol rol = rolRepository.findByNombreRol("USER").orElseGet(() -> {
+            Rol r = new Rol();
+            r.nombreRol = "USER";
+            r.descripcion = "Usuario";
+            return rolRepository.save(r);
+        });
 
         Usuario usuario = new Usuario();
         usuario.nombre = "Rodrigo";
@@ -84,10 +86,12 @@ class ReservaRepositoryTest {
     @Test
     @DisplayName("Debe buscar reservas por usuario")
     void buscarReservasPorUsuario() {
-        Rol rol = new Rol();
-        rol.nombreRol = "ADMIN";
-        rol.descripcion = "Administrador";
-        rol = rolRepository.save(rol);
+        Rol rol = rolRepository.findByNombreRol("ADMIN").orElseGet(() -> {
+            Rol r = new Rol();
+            r.nombreRol = "ADMIN";
+            r.descripcion = "Administrador";
+            return rolRepository.save(r);
+        });
 
         Usuario usuario = new Usuario();
         usuario.nombre = "Ana";

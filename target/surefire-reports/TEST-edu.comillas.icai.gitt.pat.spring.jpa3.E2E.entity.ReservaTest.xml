@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.comillas.icai.gitt.pat.spring.jpa3.E2E.controller.AuthControllerIntegrationTest" time="2.483" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.comillas.icai.gitt.pat.spring.jpa3.E2E.entity.ReservaTest" time="0.043" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -10,9 +10,11 @@
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
     <property name="user.timezone" value="Europe/Paris"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
     <property name="user.country.format" value="US"/>
     <property name="os.name" value="Windows 11"/>
     <property name="java.vm.specification.version" value="21"/>
+    <property name="APPLICATION_NAME" value="jpa3"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="MX"/>
     <property name="sun.boot.library.path" value="C:\Users\lopez\.jdks\temurin-21.0.10\bin"/>
@@ -31,6 +33,8 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
     <property name="surefire.real.class.path" value="C:\Users\lopez\AppData\Local\Temp\surefire15661123750242574992\surefirebooter-20260515224512780_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -50,8 +54,10 @@
     <property name="user.dir" value="C:\Users\lopez\OneDrive - Universidad Pontificia Comillas\Documentos\comillas\Aplicaciones\ProyectoFINALPAT\FrontEnd-PadelClub"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="1160"/>
     <property name="user.language.format" value="en"/>
     <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Users\lopez\.jdks\temurin-21.0.10\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\lopez\.jdks\temurin-21.0.10;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\lopez\AppData\Local\Programs\Python\Python313;C:\Users\lopez\AppData\Local\Programs\Python\Python313\Scripts;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Users\lopez\.jdks\temurin-21.0.10;C:\Program Files\PuTTY\;C:\Users\lopez\Downloads\apache-maven-4.0.0-rc-4-bin\apache-maven-4.0.0-rc-4\bin;C:\Program Files\GitHub CLI\;C:\Program Files\dotnet\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Git\cmd;C:\Users\lopez\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Users\lopez\AppData\Local\Programs\Python\Launcher\;C:\Users\lopez\AppData\Local\Microsoft\WindowsApps;C:\msys64\ucrt64\bin;C:\Users\lopez\AppData\Local\gitkraken\bin;C:\Users\lopez\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\lopez\AppData\Roaming\npm;C:\Users\lopez\AppData\Local\GitHubDesktop\bin;C:\Users\lopez\.dotnet\tools;C:\Program Files (x86)\Nmap;C:\Users\lopez\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\lopez\AppData\Local\Programs\Antigravity\bin;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
@@ -60,54 +66,8 @@
     <property name="java.vm.version" value="21.0.10+7-LTS"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[jpa3] "/>
   </properties>
-  <testcase name="register_devuelve201_y_usuario_creado" classname="edu.comillas.icai.gitt.pat.spring.jpa3.E2E.controller.AuthControllerIntegrationTest" time="2.45">
-    <system-out><![CDATA[22:45:15.794 [main] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-22:45:15.796 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-22:45:15.803 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 4 ms
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /pistaPadel/auth/register
-       Parameters = {}
-          Headers = [Content-Type:"application/json", Content-Length:"142"]
-             Body = <no character encoding set>
-    Session Attrs = {}
-
-Handler:
-             Type = edu.comillas.icai.gitt.pat.spring.jpa3.controller.AuthController
-           Method = edu.comillas.icai.gitt.pat.spring.jpa3.controller.AuthController#register(Usuario)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 201
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json"]
-     Content type = application/json
-             Body = {"id":1,"nombre":"Ana","apellidos":"García","email":"ana@test.com","password":"1234","telefono":"123456789","rol":null,"fechaRegistro":null,"activo":true}
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
-]]></system-out>
-    <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
-WARNING: A Java agent has been loaded dynamically (C:\Users\lopez\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
-  </testcase>
+  <testcase name="inicializacion_valoresPorDefecto" classname="edu.comillas.icai.gitt.pat.spring.jpa3.E2E.entity.ReservaTest" time="0.028"/>
+  <testcase name="calcularHoraFin" classname="edu.comillas.icai.gitt.pat.spring.jpa3.E2E.entity.ReservaTest" time="0.012"/>
 </testsuite>

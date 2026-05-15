@@ -1,5 +1,6 @@
 package edu.comillas.icai.gitt.pat.spring.jpa3.E2E.service;
 
+import edu.comillas.icai.gitt.pat.spring.jpa3.entity.Pista;
 import edu.comillas.icai.gitt.pat.spring.jpa3.entity.Reserva;
 import edu.comillas.icai.gitt.pat.spring.jpa3.entity.Usuario;
 import edu.comillas.icai.gitt.pat.spring.jpa3.repos.ReservaRepository;
@@ -11,6 +12,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -36,6 +38,11 @@ class ReservaServiceTest {
         reserva.usuario.email = "test@test.com";
         reserva.horaInicio = LocalTime.of(10, 0);
         reserva.duracionMinutos = 60;
+
+        Pista pista = new Pista();
+        pista.idPista = 1L;
+        reserva.pista = pista;
+        reserva.fechaReserva = LocalDate.now();
 
         when(reservaRepository.save(any(Reserva.class))).thenReturn(reserva);
 

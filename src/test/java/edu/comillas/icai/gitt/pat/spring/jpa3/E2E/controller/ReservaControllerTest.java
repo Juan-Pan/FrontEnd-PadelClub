@@ -1,5 +1,6 @@
 package edu.comillas.icai.gitt.pat.spring.jpa3.E2E.controller;
 
+import edu.comillas.icai.gitt.pat.spring.jpa3.controller.ReservaController;
 import edu.comillas.icai.gitt.pat.spring.jpa3.repos.PistaRepository;
 import edu.comillas.icai.gitt.pat.spring.jpa3.repos.UsuarioRepository;
 import edu.comillas.icai.gitt.pat.spring.jpa3.service.DisponibilidadService;
@@ -19,7 +20,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(ReservaControllerTest.class)
+@WebMvcTest(ReservaController.class)
 public class ReservaControllerTest {
     @Autowired
     MockMvc mockMvc;
@@ -31,6 +32,10 @@ public class ReservaControllerTest {
     UsuarioRepository usuarioRepository;
     @MockitoBean
     PistaRepository pistaRepository;
+    @MockitoBean
+    edu.comillas.icai.gitt.pat.spring.jpa3.service.UsuarioService usuarioService;
+    @MockitoBean
+    edu.comillas.icai.gitt.pat.spring.jpa3.service.PistaService pistaService;
 
     @Test
     @WithMockUser(username = "ana@test.com", roles = "USER")
@@ -48,4 +53,3 @@ public class ReservaControllerTest {
 
 
 }
-

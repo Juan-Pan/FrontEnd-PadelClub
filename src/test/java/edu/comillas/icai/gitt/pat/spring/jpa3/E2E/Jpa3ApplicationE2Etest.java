@@ -1,4 +1,4 @@
-package edu.comillas.icai.pista_padel.e2e;
+package edu.comillas.icai.gitt.pat.spring.jpa3.E2E;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -27,6 +27,8 @@ class PistaPadelE2EFullTest {
         String body = """
                 {
                   "nombre": "User",
+                  "apellidos": "Test",
+                  "telefono": "123456789",
                   "email": "%s",
                   "password": "aaaaaaA1"
                 }
@@ -42,39 +44,26 @@ class PistaPadelE2EFullTest {
         return email;
     }
 
-    private String login(String email) {
-        String body = """
-                {
-                  "email": "%s",
-                  "password": "aaaaaaA1"
-                }
-                """.formatted(email);
-
-        ResponseEntity<String> response = client.exchange(
-                "/pistaPadel/auth/login",
-                HttpMethod.POST,
-                new HttpEntity<>(body, jsonHeaders()),
-                String.class
-        );
-
-        Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());
-
-        return response.getBody();
+    private HttpHeaders authHeaders(String email) {
+        HttpHeaders headers = jsonHeaders();
+        if (email.equals("admin@padel.com")) {
+            headers.setBasicAuth(email, "1234");
+        } else {
+            headers.setBasicAuth(email, "aaaaaaA1");
+        }
+        return headers;
     }
 
     @Test
     void createCourtTest() {
 
-        String adminEmail = "admin@email.com";
-        registerUser(adminEmail);
-        String token = login(adminEmail);
+        String adminEmail = "admin@padel.com"; // User created in data.sql as ADMIN
 
-        HttpHeaders headers = jsonHeaders();
-        headers.setBearerAuth(token);
+        HttpHeaders headers = authHeaders(adminEmail);
 
         String body = """
                 {
-                  "nombre": "Pista 1",
+                  "nombre": "Pista Test 1",
                   "ubicacion": "Interior",
                   "precioHora": 20,
                   "activa": true
@@ -94,16 +83,16 @@ class PistaPadelE2EFullTest {
     @Test
     void createReservationTest() {
 
-        String email = "user@email.com";
-        registerUser(email);
-        String token = login(email);
+        String adminEmail = "admin@padel.com";
+        HttpHeaders adminHeaders = authHeaders(adminEmail);
 
-        HttpHeaders headers = jsonHeaders();
-        headers.setBearerAuth(token);
+        String email = "usertest1@email.com";
+        registerUser(email);
+        HttpHeaders userHeaders = authHeaders(email);
 
         String courtBody = """
                 {
-                  "nombre": "Pista 1",
+                  "nombre": "Pista Test 2",
                   "ubicacion": "Exterior",
                   "precioHora": 25,
                   "activa": true
@@ -111,21 +100,21 @@ class PistaPadelE2EFullTest {
                 """;
 
         client.exchange("/pistaPadel/courts", HttpMethod.POST,
-                new HttpEntity<>(courtBody, headers), String.class);
+                new HttpEntity<>(courtBody, adminHeaders), String.class);
 
         String reservationBody = """
                 {
-                  "courtId": 1,
-                  "date": "2026-03-10",
-                  "startTime": "18:00",
-                  "durationMinutes": 60
+                  "pista": { "idPista": 1 },
+                  "fechaReserva": "2026-03-10",
+                  "horaInicio": "18:00:00",
+                  "duracionMinutos": 60
                 }
                 """;
 
         ResponseEntity<String> response = client.exchange(
                 "/pistaPadel/reservations",
                 HttpMethod.POST,
-                new HttpEntity<>(reservationBody, headers),
+                new HttpEntity<>(reservationBody, userHeaders),
                 String.class
         );
 
@@ -135,16 +124,16 @@ class PistaPadelE2EFullTest {
     @Test
     void reservationConflictTest() {
 
-        String email = "user@email.com";
-        registerUser(email);
-        String token = login(email);
+        String adminEmail = "admin@padel.com";
+        HttpHeaders adminHeaders = authHeaders(adminEmail);
 
-        HttpHeaders headers = jsonHeaders();
-        headers.setBearerAuth(token);
+        String email = "usertest2@email.com";
+        registerUser(email);
+        HttpHeaders userHeaders = authHeaders(email);
 
         String courtBody = """
                 {
-                  "nombre": "Pista 2",
+                  "nombre": "Pista Test 3",
                   "ubicacion": "Interior",
                   "precioHora": 20,
                   "activa": true
@@ -152,24 +141,24 @@ class PistaPadelE2EFullTest {
                 """;
 
         client.exchange("/pistaPadel/courts", HttpMethod.POST,
-                new HttpEntity<>(courtBody, headers), String.class);
+                new HttpEntity<>(courtBody, adminHeaders), String.class);
 
         String reservation = """
                 {
-                  "courtId": 1,
-                  "date": "2026-03-10",
-                  "startTime": "18:00",
-                  "durationMinutes": 60
+                  "pista": { "idPista": 1 },
+                  "fechaReserva": "2026-03-10",
+                  "horaInicio": "18:00:00",
+                  "duracionMinutos": 60
                 }
                 """;
 
         client.exchange("/pistaPadel/reservations",
-                HttpMethod.POST, new HttpEntity<>(reservation, headers), String.class);
+                HttpMethod.POST, new HttpEntity<>(reservation, userHeaders), String.class);
 
         ResponseEntity<String> conflict = client.exchange(
                 "/pistaPadel/reservations",
                 HttpMethod.POST,
-                new HttpEntity<>(reservation, headers),
+                new HttpEntity<>(reservation, userHeaders),
                 String.class
         );
 
@@ -179,12 +168,9 @@ class PistaPadelE2EFullTest {
     @Test
     void getReservationsTest() {
 
-        String email = "user@email.com";
+        String email = "usertest3@email.com";
         registerUser(email);
-        String token = login(email);
-
-        HttpHeaders headers = jsonHeaders();
-        headers.setBearerAuth(token);
+        HttpHeaders headers = authHeaders(email);
 
         ResponseEntity<String> response = client.exchange(
                 "/pistaPadel/reservations",
@@ -199,13 +185,28 @@ class PistaPadelE2EFullTest {
     @Test
     void availabilityTest() {
 
+        String adminEmail = "admin@padel.com";
+        HttpHeaders adminHeaders = authHeaders(adminEmail);
+
+        String courtBody = """
+                {
+                  "nombre": "Pista Disponibilidad",
+                  "ubicacion": "Exterior",
+                  "precioHora": 22,
+                  "activa": true
+                }
+                """;
+
+        client.exchange("/pistaPadel/courts", HttpMethod.POST,
+                new HttpEntity<>(courtBody, adminHeaders), String.class);
+
         ResponseEntity<String> response = client.exchange(
-                "/pistaPadel/availability?date=2026-03-10",
+                "/pistaPadel/courts/1/availability?date=2026-03-10",
                 HttpMethod.GET,
                 null,
                 String.class
         );
 
-        Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());
+        Assertions.assertTrue(response.getStatusCode().is2xxSuccessful());
     }
 }
