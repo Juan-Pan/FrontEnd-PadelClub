@@ -6,7 +6,7 @@ const AuthService = {
     async login(email, password) {
         const token = btoa(`${email}:${password}`);
         localStorage.setItem('userAuth', token);
-        
+
         try {
             const user = await this.getMe();
             localStorage.setItem('userInfo', JSON.stringify(user));
@@ -22,10 +22,16 @@ const AuthService = {
         return await apiFetch('/auth/me', 'GET');
     },
 
-    logout() {
-        localStorage.removeItem('userAuth');
-        localStorage.removeItem('userInfo');
-        window.location.replace('index.html');
+    async logout() {
+        try {
+            await apiFetch('/auth/logout', 'POST');
+        } catch (_) {
+            // Si falla el servidor, igual limpiamos sesión local
+        } finally {
+            localStorage.removeItem('userAuth');
+            localStorage.removeItem('userInfo');
+            window.location.replace('index.html');
+        }
     },
 
     isLoggedIn() {
