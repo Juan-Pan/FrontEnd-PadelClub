@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b085a5b-f0ef-4f7c-96e0-19153d3a943d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/js/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa3/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa3/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/controller/ReservaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/controller/ReservaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/service/PistaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/service/PistaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/service/ReservaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/service/ReservaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/comillas/icai/gitt/pat/spring/jpa3/service/UsuarioService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="5b085a5b-f0ef-4f7c-96e0-19153d3a943d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +49,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Juan-Pan/FrontEnd-PadelClub.git",
-    "accountId": "dd45c514-0caf-47a4-a14d-6caa4ffeb3b4"
+    "accountId": "6f2c3901-7c5c-4cfc-87e3-3f6a2693490f"
   }
 }]]></component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -97,7 +86,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lopez/OneDrive - Universidad Pontificia Comillas/Documentos/comillas/Aplicaciones/ProyectoFINALPAT/FrontEnd-PadelClub",
+    "last_opened_file_path": "/Users/anarecarte-pacheco/FrontEnd-PadelClub",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -132,6 +121,7 @@
       <workItem from="1776237729876" duration="13569000" />
       <workItem from="1776279220480" duration="3894000" />
       <workItem from="1776284592383" duration="2467000" />
+      <workItem from="1778857202017" duration="310000" />
     </task>
     <servers />
   </component>
